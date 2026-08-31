@@ -67,18 +67,18 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo - Bigger */}
+          <div className="flex items-center justify-between h-14 sm:h-16">
+            {/* Logo */}
             <motion.a
               href="#home"
-              className="text-xl sm:text-2xl font-semibold tracking-tight text-white hover:text-primaryAccent transition-colors"
+              className="text-base sm:text-lg font-semibold tracking-tight text-white hover:text-primaryAccent transition-colors"
               whileHover={{ scale: 1.02 }}
             >
               Jahir Shaikh
             </motion.a>
 
-            {/* Desktop Navigation - Bigger */}
-            <div className="hidden md:flex items-center space-x-2">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => (
                 <motion.a
                   key={item.label}
@@ -87,7 +87,7 @@ const Navbar = () => {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className={`px-4 py-2 text-base font-medium rounded-lg transition-all duration-200 ${
+                  className={`px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-200 ${
                     activeSection === item.href.substring(1)
                       ? 'text-primaryAccent bg-[rgba(168,85,247,0.08)]'
                       : 'text-secondaryText hover:text-white hover:bg-[rgba(255,255,255,0.04)]'
@@ -100,31 +100,31 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Social Icons - Bigger */}
-            <div className="hidden md:flex items-center space-x-4">
+            {/* Social Icons */}
+            <div className="hidden md:flex items-center space-x-3">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-secondaryText hover:text-white transition-colors p-2 rounded-lg hover:bg-[rgba(255,255,255,0.05)]"
+                  className="text-secondaryText hover:text-white transition-colors p-1.5 rounded-lg hover:bg-[rgba(255,255,255,0.05)]"
                   whileHover={{ scale: 1.1, y: -1 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4" />
                 </motion.a>
               ))}
             </div>
 
-            {/* Mobile Menu Button - Bigger */}
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2.5 rounded-lg text-secondaryText hover:text-white hover:bg-[rgba(255,255,255,0.05)] transition-colors"
+              className="md:hidden p-2 rounded-lg text-secondaryText hover:text-white hover:bg-[rgba(255,255,255,0.05)] transition-colors"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -145,11 +145,11 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="absolute right-0 top-0 h-full w-80 glass border-l border-[rgba(168,85,247,0.08)] p-6"
+              className="absolute right-0 top-0 h-full w-72 glass border-l border-[rgba(168,85,247,0.08)] p-5"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex flex-col h-full pt-16">
-                <div className="flex-1 space-y-2">
+              <div className="flex flex-col h-full pt-14">
+                <div className="flex-1 space-y-1">
                   {navItems.map((item, index) => (
                     <motion.a
                       key={item.label}
@@ -158,7 +158,7 @@ const Navbar = () => {
                         e.preventDefault();
                         scrollToSection(item.href);
                       }}
-                      className={`block px-4 py-3.5 text-base font-medium rounded-lg transition-all ${
+                      className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-all ${
                         activeSection === item.href.substring(1)
                           ? 'text-primaryAccent bg-[rgba(168,85,247,0.08)]'
                           : 'text-secondaryText hover:text-white hover:bg-[rgba(255,255,255,0.04)]'
@@ -172,28 +172,28 @@ const Navbar = () => {
                   ))}
                 </div>
 
-                <div className="border-t border-[rgba(255,255,255,0.06)] pt-4 space-y-4">
-                  <div className="flex items-center space-x-2 px-4 py-2 rounded-full bg-[rgba(168,85,247,0.06)] border border-[rgba(168,85,247,0.1)] w-fit">
-                    <span className="relative flex h-2 w-2">
+                <div className="border-t border-[rgba(255,255,255,0.06)] pt-3 space-y-3">
+                  <div className="flex items-center space-x-2 px-3 py-1.5 rounded-full bg-[rgba(168,85,247,0.06)] border border-[rgba(168,85,247,0.1)] w-fit">
+                    <span className="relative flex h-1.5 w-1.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-400"></span>
                     </span>
-                    <span className="text-xs font-medium text-secondaryText">Available for Internship</span>
+                    <span className="text-[10px] font-medium text-secondaryText">Available for Internship</span>
                   </div>
                   
-                  <div className="flex space-x-4 px-4">
+                  <div className="flex space-x-3 px-4">
                     {socialLinks.map((social) => (
                       <motion.a
                         key={social.label}
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-secondaryText hover:text-white transition-colors p-2 rounded-lg hover:bg-[rgba(255,255,255,0.05)]"
+                        className="text-secondaryText hover:text-white transition-colors p-1.5 rounded-lg hover:bg-[rgba(255,255,255,0.05)]"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         aria-label={social.label}
                       >
-                        <social.icon className="w-6 h-6" />
+                        <social.icon className="w-5 h-5" />
                       </motion.a>
                     ))}
                   </div>

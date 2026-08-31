@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const TechStack = () => {
   const techStack = [
     // Programming Languages
-    { name: 'Python', icon: 'https://www.python.org/static/community_logos/python-logo-generic.svg' },
+    { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
     { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
     
     // ML/DL Frameworks

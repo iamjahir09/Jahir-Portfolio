@@ -122,6 +122,26 @@ export const portfolioData = {
       ],
       github: 'https://github.com/iamjahir09/movie-recommendation-system',
       visual: 'movie'
+    },
+        {
+      id: 5,
+      title: 'Blyntrex — Social Media UI',
+      tech: ['React', 'Tailwind CSS', 'React Router DOM', 'LocalStorage'],
+      description: 'A modern, responsive social media interface inspired by Instagram, featuring client-side authentication, interactive stories, posts feed, user profiles, suggestions, and adaptive mobile navigation.',
+      features: [
+        'User signup and login',
+        'Client-side authentication with LocalStorage',
+        'Responsive social media feed',
+        'Interactive stories section',
+        'Posts with like, comment, share and save actions',
+        'User profile and suggestions',
+        'React Router navigation',
+        'Responsive desktop and mobile layouts',
+        'Reusable React components',
+        'Dark modern UI with Tailwind CSS'
+      ],
+      github: 'https://github.com/iamjahir09/React',
+      visual: 'social'
     }
   ],
 
@@ -135,6 +155,26 @@ export const portfolioData = {
       title: 'Machine Learning Crash Course',
       issuer: 'Google Developer Program',
       link: 'https://developers.google.com/profile/u/iamjahir09'
+    },
+    {
+      title: 'AI/ML for Geodata Analysis',
+      issuer: 'ISRO - Indian Institute of Remote Sensing (IIRS)',
+      link: 'https://certificate.iirs.gov.in/'
+    },
+    {
+      title: 'Generative AI with Diffusion Models',
+      issuer: 'AWS Training & Certification',
+      link: 'https://aws.amazon.com/training/'
+    },
+    {
+      title: 'IBM Cloud Essentials',
+      issuer: 'IBM SkillsBuild',
+      link: 'https://courses.yl-ptech.skillsnetwork.site/certificates/da55e5d9fd0249c286d3ed4c9b513dfb'
+    },
+    {
+      title: 'Microsoft Azure AI Essentials: Workloads and Machine Learning on Azure',
+      issuer: 'LinkedIn Learning',
+      link: 'https://www.linkedin.com/learning/'
     }
   ],
 

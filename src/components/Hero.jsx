@@ -53,22 +53,22 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-transparent">
       
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-5"
+            className="space-y-4"
           >
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]"
             >
               <span className="block text-white">Hey! I'm</span>
               <span className="gradient-text block">Jahir Shaikh</span>
@@ -81,11 +81,11 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="flex items-center space-x-2 flex-wrap"
             >
-              <span className="text-lg sm:text-xl text-secondaryText font-medium">AI & ML Enthusiast</span>
-              <span className="text-lg sm:text-xl text-secondaryText font-medium">·</span>
-              <span className="text-lg sm:text-xl font-semibold text-primaryAccent">
+              <span className="text-base sm:text-lg text-secondaryText font-medium">AI & ML Enthusiast</span>
+              <span className="text-base sm:text-lg text-secondaryText font-medium">·</span>
+              <span className="text-base sm:text-lg font-semibold text-primaryAccent">
                 {displayText}
-                <span className="inline-block w-0.5 h-6 ml-0.5 bg-primaryAccent animate-pulse"></span>
+                <span className="inline-block w-0.5 h-5 ml-0.5 bg-primaryAccent animate-pulse"></span>
               </span>
             </motion.div>
 
@@ -94,7 +94,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-base sm:text-lg text-secondaryText max-w-lg leading-relaxed"
+              className="text-sm sm:text-base text-secondaryText max-w-lg leading-relaxed"
             >
               Building intelligent systems that turn data into real-world solutions.
             </motion.p>
@@ -104,27 +104,27 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-wrap gap-3 pt-2"
+              className="flex flex-wrap gap-2.5 pt-1"
             >
               <motion.a
                 href="#projects"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primaryAccent to-secondaryAccent text-white font-medium rounded-lg hover:shadow-lg hover:shadow-[rgba(168,85,247,0.25)] transition-all"
+                className="group inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primaryAccent to-secondaryAccent text-white font-medium rounded-lg hover:shadow-lg hover:shadow-[rgba(168,85,247,0.25)] transition-all text-sm"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
                 View Projects
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
               
               <motion.a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] text-white font-medium rounded-lg hover:bg-[rgba(255,255,255,0.08)] transition-all backdrop-blur-sm"
+                className="group inline-flex items-center gap-2 px-5 py-2.5 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] text-white font-medium rounded-lg hover:bg-[rgba(255,255,255,0.08)] transition-all backdrop-blur-sm text-sm"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Download className="w-4 h-4" />
+                <Download className="w-3.5 h-3.5" />
                 Download Resume
               </motion.a>
             </motion.div>
@@ -134,7 +134,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="flex items-center space-x-2 pt-2"
+              className="flex items-center space-x-1.5 pt-1"
             >
               {socialLinks.map((social) => (
                 <motion.a
@@ -142,12 +142,12 @@ const Hero = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 text-secondaryText hover:text-white rounded-lg hover:bg-[rgba(255,255,255,0.05)] transition-all"
+                  className="p-2 text-secondaryText hover:text-white rounded-lg hover:bg-[rgba(255,255,255,0.05)] transition-all"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4" />
                 </motion.a>
               ))}
             </motion.div>
@@ -166,7 +166,7 @@ const Hero = () => {
               
               {/* Image Container */}
               <motion.div
-                className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-[rgba(168,85,247,0.15)] shadow-xl shadow-[rgba(168,85,247,0.05)]"
+                className="relative w-60 h-60 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border border-[rgba(168,85,247,0.15)] shadow-xl shadow-[rgba(168,85,247,0.05)]"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
