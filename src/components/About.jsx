@@ -27,22 +27,22 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
+          {/* ABOUT ME - White Color, Thoda Upar, Thoda Bada */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(168,85,247,0.06)] border border-[rgba(168,85,247,0.08)] mb-4"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] mb-4"
           >
-            <Sparkles className="w-3.5 h-3.5 text-primaryAccent" />
-            <span className="text-xs font-medium text-primaryAccent/70 tracking-wider uppercase">About Me</span>
+            <span className="text-sm font-medium text-white/80 tracking-wider uppercase">About Me</span>
           </motion.div>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">
             Know Me <span className="gradient-text">Better</span>
           </h2>
 
-          {/* Cursive Text - Cyan/Teal Color (Right Side Light Color) */}
+          {/* Cursive Text - Cyan/Teal Color */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}

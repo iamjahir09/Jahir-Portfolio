@@ -11,7 +11,7 @@ const TechIcon = ({ tech, className = "w-7 h-7" }) => {
           <img 
             src="https://www.python.org/static/community_logos/python-logo-generic.svg" 
             alt="Python" 
-            className="w-7 h-7"
+            className="w-17 h-7"
           />
         );
       case 'Java':

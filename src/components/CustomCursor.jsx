@@ -15,23 +15,32 @@ const CustomCursor = () => {
 
   const isDesktop = window.innerWidth >= 768;
 
-  // Right side light color - Cyan/Teal
+  // Cursor main color = Light color (Cyan/Teal)
   const mainColor = '#22D3EE';
-  const colors = ['#22D3EE', '#06B6D4', '#67E8F9', '#A5F3FC', '#34D399', '#2DD4BF'];
+  
+  // Trail particles - Different colors (rainbow)
+  const trailColors = ['#A855F7', '#6366F1', '#22D3EE', '#EC4899', '#F59E0B', '#10B981', '#EF4444', '#8B5CF6', '#F472B6', '#34D399'];
+
+  // For background particle removal - track cursor position for CSS
+  const [cursorPos, setCursorPos] = useState({ x: -999, y: -999 });
 
   useEffect(() => {
     if (!isDesktop) return;
 
     const updatePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      const x = e.clientX;
+      const y = e.clientY;
+      
+      setPosition({ x, y });
+      setCursorPos({ x, y });
       
       // Add colorful trail particle
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      const randomColor = trailColors[Math.floor(Math.random() * trailColors.length)];
       setTrails(prev => [...prev, {
         id: Date.now() + Math.random(),
-        x: e.clientX,
-        y: e.clientY,
-        size: Math.random() * 3 + 1.5,
+        x: x,
+        y: y,
+        size: Math.random() * 4 + 2,
         life: 1,
         vy: -(Math.random() * 0.8 + 0.2),
         vx: (Math.random() - 0.5) * 0.8,
@@ -116,7 +125,20 @@ const CustomCursor = () => {
 
   return (
     <>
-      {/* Airplane Cursor - Smaller */}
+      {/* Background Particle Mask - CSS to hide background particles near cursor */}
+      <style>{`
+        .bg-particle {
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .bg-particle.hidden {
+          opacity: 0 !important;
+          transform: scale(0) !important;
+          pointer-events: none !important;
+        }
+      `}</style>
+
+      {/* Airplane Cursor - Cyan/Teal Color */}
       <motion.div
         className="fixed pointer-events-none z-[9999]"
         style={{
@@ -146,7 +168,7 @@ const CustomCursor = () => {
           transition={{ duration: 0.3, ease: 'easeOut' }}
         />
 
-        {/* Airplane SVG - Smaller */}
+        {/* Airplane SVG */}
         <svg viewBox="0 0 24 24" fill="none" style={{ width: '100%', height: '100%', filter: `drop-shadow(0 0 8px ${mainColor}40)` }}>
           <path
             d="M12 1 L15 10 L23 12 L15 14 L12 23 L9 14 L1 12 L9 10 L12 1Z"
@@ -164,7 +186,7 @@ const CustomCursor = () => {
         </svg>
       </motion.div>
 
-      {/* Colorful Trail Particles - Cyan/Teal shades */}
+      {/* Colorful Trail Particles */}
       {trails.map((trail) => (
         <motion.div
           key={trail.id}
@@ -175,7 +197,7 @@ const CustomCursor = () => {
             width: trail.size,
             height: trail.size,
             background: trail.color,
-            opacity: trail.life * 0.6,
+            opacity: trail.life * 0.7,
             boxShadow: `0 0 ${trail.size * 2}px ${trail.color}40`,
           }}
         />
@@ -197,8 +219,45 @@ const CustomCursor = () => {
           }}
         />
       ))}
+
+      {/* Background Particles Eradication Script */}
+      <CursorParticleEradicator cursorPos={cursorPos} />
     </>
   );
+};
+
+// Component to handle background particle removal
+const CursorParticleEradicator = ({ cursorPos }) => {
+  useEffect(() => {
+    const particles = document.querySelectorAll('.bg-particle');
+    
+    const handleParticles = () => {
+      particles.forEach((particle) => {
+        const rect = particle.getBoundingClientRect();
+        const px = rect.left + rect.width / 2;
+        const py = rect.top + rect.height / 2;
+        
+        const dx = px - cursorPos.x;
+        const dy = py - cursorPos.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        if (dist < 150) {
+          particle.classList.add('hidden');
+        } else {
+          particle.classList.remove('hidden');
+        }
+      });
+    };
+
+    const interval = setInterval(handleParticles, 50);
+    handleParticles();
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [cursorPos]);
+
+  return null;
 };
 
 export default CustomCursor;
