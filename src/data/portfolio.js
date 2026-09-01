@@ -142,6 +142,28 @@ export const portfolioData = {
       ],
       github: 'https://github.com/iamjahir09/React',
       visual: 'social'
+    },
+        {
+      id: 6,
+      title: 'Skitii Health Tech — Health Monitoring System',
+      tech: ['Next.js', 'React', 'TypeScript', 'NestJS', 'MongoDB', 'BLE'],
+      description: 'A full-stack health monitoring application that integrates Bluetooth Low Energy (BLE) devices with a modern web interface for managing patients, health monitoring sessions, and real-time heart rate data.',
+      features: [
+        'JWT-based user authentication',
+        'Patient profile management',
+        'Health monitoring session management',
+        'Bluetooth Low Energy (BLE) device integration',
+        'Real-time heart rate data parsing',
+        'Real-time device connection status',
+        'Start, pause and manage monitoring sessions',
+        'RESTful API architecture',
+        'MongoDB data persistence',
+        'Responsive Next.js interface',
+        'BLE mock functionality for testing',
+        'React Context API for authentication state'
+      ],
+      github: 'https://github.com/iamjahir09/PulseSync',
+      visual: 'health'
     }
   ],
 

@@ -21,9 +21,7 @@ const Contact = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-2 mb-4">
             Let's Build Something <span className="gradient-text">Intelligent.</span>
           </h2>
-          <p className="text-secondaryText text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Open to software development, AI/ML internships and interesting technical collaborations.
-          </p>
+          
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

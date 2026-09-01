@@ -6,6 +6,7 @@ import Skills from './components/TechStack';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Journey from './components/Journey';
+import GitHubStats from './components/GitHubStats';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackgroundEffect from './components/BackgroundEffect';
@@ -29,6 +30,7 @@ function App() {
           <Projects />
           <Certifications />
           <Journey />
+          <GitHubStats/>
           <Contact />
         </main>
         <Footer />
