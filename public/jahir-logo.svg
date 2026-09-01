@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer Hexagon Shape -->
+  <polygon points="50 2, 95 25, 95 75, 50 98, 5 75, 5 25" fill="#070A0F" stroke="#A855F7" stroke-width="2"/>
+  
+  <!-- Inner Hexagon -->
+  <polygon points="50 12, 85 30, 85 70, 50 88, 15 70, 15 30" fill="none" stroke="#6366F1" stroke-width="1.2" opacity="0.4"/>
+  
+  <!-- JS Text with Gradient -->
+  <text x="50" y="58" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="38" font-weight="800" fill="url(#grad)">
+    JS
+  </text>
+  
+  <!-- Decorative Dots -->
+  <circle cx="50" cy="88" r="2.5" fill="#22D3EE" opacity="0.4"/>
+  <circle cx="25" cy="22" r="1.5" fill="#A855F7" opacity="0.3"/>
+  <circle cx="75" cy="22" r="1.5" fill="#6366F1" opacity="0.3"/>
+  <circle cx="15" cy="50" r="1.5" fill="#22D3EE" opacity="0.2"/>
+  <circle cx="85" cy="50" r="1.5" fill="#22D3EE" opacity="0.2"/>
+  
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="40%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+</svg>
