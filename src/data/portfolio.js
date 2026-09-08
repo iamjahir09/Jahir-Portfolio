@@ -44,6 +44,7 @@ export const portfolioData = {
     {
       id: 1,
       title: 'Lightweight Image Classifier for Edge Devices',
+      image: "/projects/image.png",
       tech: ['Python', 'TensorFlow/Keras', 'CNN'],
       description: 'An end-to-end CNN image classification pipeline designed for deployment on resource-constrained edge devices.',
       metrics: {
@@ -69,44 +70,8 @@ export const portfolioData = {
     },
     {
       id: 2,
-      title: 'Airline Reservation System',
-      tech: ['Core Java', 'OOP', 'Java Collections'],
-      description: 'A console-based airline reservation system built using Core Java with modular Admin and Passenger functionality.',
-      features: [
-        'Admin authentication',
-        'Passenger authentication',
-        'Flight search',
-        'Ticket booking',
-        'Cancellation',
-        'Seat availability',
-        'Fare calculation',
-        'Booking history',
-        'Exception handling',
-        'Modular class design'
-      ],
-      github: 'https://github.com/iamjahir09/airline-reservation-system',
-      visual: 'airline'
-    },
-    {
-      id: 3,
-      title: 'CreditGuard — Loan Default Risk Prediction',
-      tech: ['Python', 'Scikit-learn', 'Logistic Regression', 'Pandas', 'NumPy'],
-      description: 'A machine learning-based loan default risk prediction system designed to assist financial institutions in evaluating loan applicants.',
-      features: [
-        'Data preprocessing',
-        'Feature engineering',
-        'Exploratory Data Analysis',
-        'Logistic Regression',
-        'Historical loan data',
-        'Risk classification'
-      ],
-      riskCategories: ['Low', 'Medium', 'High'],
-      github: 'https://github.com/iamjahir09/CreditGuard---Loan-Default-Risk-Prediction',
-      visual: 'finance'
-    },
-    {
-      id: 4,
       title: 'Movie Recommendation System',
+      image: "/projects/movie.png",
       tech: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Streamlit'],
       description: 'A content-based movie recommendation system that recommends similar movies based on movie metadata using cosine similarity.',
       features: [
@@ -123,51 +88,11 @@ export const portfolioData = {
       github: 'https://github.com/iamjahir09/movie-recommendation-system',
       visual: 'movie'
     },
+    
         {
-      id: 5,
-      title: 'Blyntrex — Social Media UI',
-      tech: ['React', 'Tailwind CSS', 'React Router DOM', 'LocalStorage'],
-      description: 'A modern, responsive social media interface inspired by Instagram, featuring client-side authentication, interactive stories, posts feed, user profiles, suggestions, and adaptive mobile navigation.',
-      features: [
-        'User signup and login',
-        'Client-side authentication with LocalStorage',
-        'Responsive social media feed',
-        'Interactive stories section',
-        'Posts with like, comment, share and save actions',
-        'User profile and suggestions',
-        'React Router navigation',
-        'Responsive desktop and mobile layouts',
-        'Reusable React components',
-        'Dark modern UI with Tailwind CSS'
-      ],
-      github: 'https://github.com/iamjahir09/React',
-      visual: 'social'
-    },
-        {
-      id: 6,
-      title: 'Skitii Health Tech — Health Monitoring System',
-      tech: ['Next.js', 'React', 'TypeScript', 'NestJS', 'MongoDB', 'BLE'],
-      description: 'A full-stack health monitoring application that integrates Bluetooth Low Energy (BLE) devices with a modern web interface for managing patients, health monitoring sessions, and real-time heart rate data.',
-      features: [
-        'JWT-based user authentication',
-        'Patient profile management',
-        'Health monitoring session management',
-        'Bluetooth Low Energy (BLE) device integration',
-        'Real-time heart rate data parsing',
-        'Real-time device connection status',
-        'Start, pause and manage monitoring sessions',
-        'RESTful API architecture',
-        'MongoDB data persistence',
-        'Responsive Next.js interface',
-        'BLE mock functionality for testing',
-        'React Context API for authentication state'
-      ],
-      github: 'https://github.com/iamjahir09/PulseSync',
-      visual: 'health'
-    },
-        {
-      id: 7,
+      id: 3,
       title: 'DocuRAG — Universal Document Intelligence Assistant',
+      image: "/projects/DocuRag.png",
       tech: [
         'Python',
         'LangChain',
@@ -199,6 +124,91 @@ export const portfolioData = {
       ],
       github: 'https://github.com/iamjahir09/Universal-Document-Intelligence-Assistant-RAG-.git',
       visual: 'rag'
+    },
+    
+    {
+      id: 4,
+      title: 'Blyntrex — Social Media UI',
+      image: "/projects/blyntrex.png",
+      tech: ['React', 'Tailwind CSS', 'React Router DOM', 'LocalStorage'],
+      description: 'A modern, responsive social media interface inspired by Instagram, featuring client-side authentication, interactive stories, posts feed, user profiles, suggestions, and adaptive mobile navigation.',
+      features: [
+        'User signup and login',
+        'Client-side authentication with LocalStorage',
+        'Responsive social media feed',
+        'Interactive stories section',
+        'Posts with like, comment, share and save actions',
+        'User profile and suggestions',
+        'React Router navigation',
+        'Responsive desktop and mobile layouts',
+        'Reusable React components',
+        'Dark modern UI with Tailwind CSS'
+      ],
+      github: 'https://github.com/iamjahir09/React',
+      visual: 'social'
+    },
+    
+    {
+      id: 5,
+      title: 'CreditGuard — Loan Default Risk Prediction',
+      image: "/projects/credit.png",
+      tech: ['Python', 'Scikit-learn', 'Logistic Regression', 'Pandas', 'NumPy'],
+      description: 'A machine learning-based loan default risk prediction system designed to assist financial institutions in evaluating loan applicants.',
+      features: [
+        'Data preprocessing',
+        'Feature engineering',
+        'Exploratory Data Analysis',
+        'Logistic Regression',
+        'Historical loan data',
+        'Risk classification'
+      ],
+      riskCategories: ['Low', 'Medium', 'High'],
+      github: 'https://github.com/iamjahir09/CreditGuard---Loan-Default-Risk-Prediction',
+      visual: 'finance'
+    },
+    
+        {
+      id: 6,
+      title: 'Skitii Health Tech — Health Monitoring System',
+      image: "/projects/skti.png",
+      tech: ['Next.js', 'React', 'TypeScript', 'NestJS', 'MongoDB', 'BLE'],
+      description: 'A full-stack health monitoring application that integrates Bluetooth Low Energy (BLE) devices with a modern web interface for managing patients, health monitoring sessions, and real-time heart rate data.',
+      features: [
+        'JWT-based user authentication',
+        'Patient profile management',
+        'Health monitoring session management',
+        'Bluetooth Low Energy (BLE) device integration',
+        'Real-time heart rate data parsing',
+        'Real-time device connection status',
+        'Start, pause and manage monitoring sessions',
+        'RESTful API architecture',
+        'MongoDB data persistence',
+        'Responsive Next.js interface',
+        'BLE mock functionality for testing',
+        'React Context API for authentication state'
+      ],
+      github: 'https://github.com/iamjahir09/PulseSync',
+      visual: 'health'
+    },
+    {
+      id: 7,
+      title: 'Airline Reservation System',
+      tech: ['Core Java', 'OOP', 'Java Collections'],
+      description: 'A console-based airline reservation system built using Core Java with modular Admin and Passenger functionality.',
+      features: [
+        'Admin authentication',
+        'Passenger authentication',
+        'Flight search',
+        'Ticket booking',
+        'Cancellation',
+        'Seat availability',
+        'Fare calculation',
+        'Booking history',
+        'Exception handling',
+        'Modular class design'
+      ],
+      github: 'https://github.com/iamjahir09/airline-reservation-system',
+      visual: 'airline'
     }
   ],
 
