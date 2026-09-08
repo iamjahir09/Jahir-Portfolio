@@ -164,6 +164,41 @@ export const portfolioData = {
       ],
       github: 'https://github.com/iamjahir09/PulseSync',
       visual: 'health'
+    },
+        {
+      id: 7,
+      title: 'DocuRAG — Universal Document Intelligence Assistant',
+      tech: [
+        'Python',
+        'LangChain',
+        'FastAPI',
+        'Hugging Face',
+        'Chroma',
+        'BM25',
+        'CrossEncoder',
+        'RAG'
+      ],
+      description: 'A universal document intelligence assistant that enables users to upload and interact with PDF, TXT, CSV, and DOCX documents using a retrieval-augmented generation pipeline with hybrid retrieval, reranking, contextual compression, and source-aware responses.',
+      features: [
+        'Dynamic user document ingestion',
+        'Supports PDF, TXT, CSV and DOCX files',
+        'Document parsing and preprocessing',
+        'Recursive text chunking',
+        'BGE-small embeddings',
+        'Chroma vector store',
+        'Hybrid BM25 and vector retrieval',
+        'MMR-based retrieval',
+        'CrossEncoder reranking',
+        'Contextual compression',
+        'Question rewriting',
+        'Chat history support',
+        'Source extraction and citation',
+        'LLM-powered answer generation',
+        'FastAPI backend',
+        'REST API endpoints for upload and chat'
+      ],
+      github: 'https://github.com/iamjahir09/Universal-Document-Intelligence-Assistant-RAG-.git',
+      visual: 'rag'
     }
   ],
 
