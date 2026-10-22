@@ -10,7 +10,7 @@ export const portfolioData = {
   linkedin: 'https://www.linkedin.com/in/jahir-shaikh',
   position: 'AI & ML Enthusiast',
   bio: "I'm an aspiring software developer and B.E. Computer Science & Engineering (AI & ML) student with strong foundations in Python, Core Java, SQL, OOP and Machine Learning. I enjoy building practical software systems and exploring how AI can be applied to real-world problems.",
-  
+
   skills: [
     {
       category: '01',
@@ -88,9 +88,38 @@ export const portfolioData = {
       github: 'https://github.com/iamjahir09/movie-recommendation-system',
       visual: 'movie'
     },
-    
-        {
+    {
       id: 3,
+      title: 'Library Management System',
+      image: "/projects/library_management.png",
+      tech: [
+        'Java',
+        'Javalin',
+        'MySQL',
+        'React',
+        'Vite',
+        'JavaScript',
+        'CSS'
+      ],
+      description:
+        'A full-stack library management system with separate admin and member workflows for book management, catalogue search, and book issue and return operations.',
+      features: [
+        'Admin and member authentication',
+        'Member registration and login',
+        'Book catalogue with search',
+        'Add, update, and delete books',
+        'Issue and return book functionality',
+        'Member and issue-record management',
+        'Dashboard statistics and book availability',
+        'Java REST API using Javalin',
+        'MySQL database integration',
+        'Responsive React frontend'
+      ],
+      github: 'https://github.com/iamjahir09/library-management-system',
+      visual: 'library'
+    },
+    {
+      id: 4,
       title: 'DocuRAG — Universal Document Intelligence Assistant',
       image: "/projects/DocuRag.png",
       tech: [
@@ -125,9 +154,9 @@ export const portfolioData = {
       github: 'https://github.com/iamjahir09/Universal-Document-Intelligence-Assistant-RAG-.git',
       visual: 'rag'
     },
-    
+
     {
-      id: 4,
+      id: 5,
       title: 'Blyntrex — Social Media UI',
       image: "/projects/blyntrex.png",
       tech: ['React', 'Tailwind CSS', 'React Router DOM', 'LocalStorage'],
@@ -147,9 +176,9 @@ export const portfolioData = {
       github: 'https://github.com/iamjahir09/React',
       visual: 'social'
     },
-    
+
     {
-      id: 5,
+      id: 6,
       title: 'CreditGuard — Loan Default Risk Prediction',
       image: "/projects/credit.png",
       tech: ['Python', 'Scikit-learn', 'Logistic Regression', 'Pandas', 'NumPy'],
@@ -166,9 +195,9 @@ export const portfolioData = {
       github: 'https://github.com/iamjahir09/CreditGuard---Loan-Default-Risk-Prediction',
       visual: 'finance'
     },
-    
-        {
-      id: 6,
+
+    {
+      id: 7,
       title: 'Skitii Health Tech — Health Monitoring System',
       image: "/projects/skti.png",
       tech: ['Next.js', 'React', 'TypeScript', 'NestJS', 'MongoDB', 'BLE'],
@@ -191,7 +220,7 @@ export const portfolioData = {
       visual: 'health'
     },
     {
-      id: 7,
+      id: 8,
       title: 'Airline Reservation System',
       tech: ['Core Java', 'OOP', 'Java Collections'],
       description: 'A console-based airline reservation system built using Core Java with modular Admin and Passenger functionality.',
